@@ -1,0 +1,12 @@
+<!-- src/app/components/product-list/product-list.component.html -->
+<div *ngIf="isLoggedIn">
+    <h2>Product List</h2>
+    <div *ngFor="let product of products">
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+    <button (click)="logout()">Logout</button>
+  </div>
+  <div *ngIf="!isLoggedIn">
+    <p>Please log in to see the product list.</p>
+  </div>
+  

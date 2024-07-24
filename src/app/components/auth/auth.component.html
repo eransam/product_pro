@@ -1,0 +1,17 @@
+<!-- src/app/components/auth/auth.component.html -->
+<div>
+    <h2>{{ isLoginMode ? 'Login' : 'Register' }}</h2>
+    <form (ngSubmit)="submit()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" [(ngModel)]="username" name="username" required>
+  
+      <label for="password">Password:</label>
+      <input type="password" id="password" [(ngModel)]="password" name="password" required>
+  
+      <button type="submit">{{ isLoginMode ? 'Login' : 'Register' }}</button>
+      <button type="button" (click)="toggleMode()">
+        Switch to {{ isLoginMode ? 'Register' : 'Login' }}
+      </button>
+    </form>
+  </div>
+  
